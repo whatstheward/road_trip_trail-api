@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_23_180622) do
+ActiveRecord::Schema.define(version: 2019_05_24_132742) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_180622) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
   end
 
   create_table "inventories", force: :cascade do |t|
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_180622) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price"
   end
 
   create_table "locations", force: :cascade do |t|
@@ -53,7 +55,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_180622) do
   end
 
   create_table "vehicles", force: :cascade do |t|
-    t.string "type"
+    t.string "make"
     t.string "model"
     t.integer "seats"
     t.integer "gas"
