@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_132742) do
+ActiveRecord::Schema.define(version: 2019_05_25_160824) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2019_05_24_132742) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_url"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "scenario"
+    t.boolean "success"
+    t.integer "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "inventories", force: :cascade do |t|
@@ -40,6 +48,14 @@ ActiveRecord::Schema.define(version: 2019_05_24_132742) do
   create_table "locations", force: :cascade do |t|
     t.string "name"
     t.string "imageUrl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trivia", force: :cascade do |t|
+    t.string "question"
+    t.string "correct_answer"
+    t.string "incorrect_answers"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

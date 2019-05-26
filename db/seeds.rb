@@ -48,3 +48,6 @@ Item.create(name: "Chapstick", price: 2)
 Item.create(name: "Kleenex", price: 1)
 Item.create(name: "Fruit", price: 2)
 Item.create(name: "Soda", price: 2)
+
+
+Event.create(scenario: "" , success: false, location_id: )

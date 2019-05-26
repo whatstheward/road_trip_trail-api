@@ -3,6 +3,6 @@ class User < ApplicationRecord
     has_many :inventories
     has_many :items, through: :inventories
 
-    has_secured_password
+    has_secure_password
     
 end
