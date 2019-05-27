@@ -4,5 +4,6 @@ class User < ApplicationRecord
     has_many :items, through: :inventories
 
     has_secure_password
+    validates :username, { uniqueness: :true}
     
 end
