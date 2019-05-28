@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Location.destroy_all
+Character.destroy_all
+Vehicle.destroy_all
+Item.destroy_all
+
 Location.create(name: "Atlanta, GA", imageUrl:"https://livability.com/sites/default/files/AtlantaGA-SkylineWithFerrisWheel.jpg")
 Location.create(name: "Memphis, TN", imageUrl: "https://theculturetrip.com/wp-content/uploads/2015/05/shutterstock_161158934.jpg")
 Location.create(name: "Pinnacle Mountain State Park, AR", imageUrl: "https://i.pinimg.com/originals/9a/2b/db/9a2bdb19bf27f74bdbf73c2a039eeb78.jpg")
@@ -48,6 +53,3 @@ Item.create(name: "Chapstick", price: 2)
 Item.create(name: "Kleenex", price: 1)
 Item.create(name: "Fruit", price: 2)
 Item.create(name: "Soda", price: 2)
-
-
-Event.create(scenario: "" , success: false, location_id: )
