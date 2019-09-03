@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :vehicles, only: [:index, :create]
   resources :locations, only: [:index, :show]
   resources :events, only: [:index, :show]
+  resources :scores, only: [:index, :create]
 
   post '/login', to: 'sessions#create', as: 'login'
 end
